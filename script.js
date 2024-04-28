@@ -1,7 +1,7 @@
 let money = 1000;  // Initial amount of money
 let factories = 0;  // Initial number of factories
 let goods = 0;  // Initial count of goods produced
-const goodsToMoneyConversionRate = 2;  // Rate at which goods are converted to money
+const goodsToMoneyConversionRate = 1;  // Rate at which goods are converted to money
 
 // Function to format numbers into compact notation
 function formatNumber(num) {
@@ -54,7 +54,7 @@ document.getElementById('buy-factory').addEventListener('click', function() {
 // Function to produce goods and convert goods to money
 function produceAndSellGoods() {
     if (factories > 0) {
-        goods += factories * 1;  // Produce goods, each factory produces 5 goods
+        goods += factories * 10;  // Produce goods, each factory produces 5 goods
         if (goods > 0) {
             let sellAmount = Math.min(goods, factories * 1);  // Can sell goods equal to what one cycle produces
             money += sellAmount * goodsToMoneyConversionRate;  // Convert goods to money
