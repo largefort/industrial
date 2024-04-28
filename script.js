@@ -56,7 +56,7 @@ function produceAndSellGoods() {
     if (factories > 0) {
         goods += factories * 5;  // Produce goods, each factory produces 5 goods
         if (goods > 0) {
-            let sellAmount = Math.min(goods, factories * 5);  // Can sell goods equal to what one cycle produces
+            let sellAmount = Math.min(goods, factories * 2);  // Can sell goods equal to what one cycle produces
             money += sellAmount * goodsToMoneyConversionRate;  // Convert goods to money
             goods -= sellAmount;  // Decrease goods by amount sold
         }
